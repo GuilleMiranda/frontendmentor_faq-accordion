@@ -1,13 +1,10 @@
+import favicon from "./assets/images/favicon-32x32.png";
+
 function App() {
   return (
     <>
       <title>Frontend Mentor | FAQ accordion</title>
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="./assets/images/favicon-32x32.png"
-      />
+      <link rel="icon" type="image/png" sizes="32x32" href={favicon} />
       <p>
         FAQs What is Frontend Mentor, and how will it help me? Frontend Mentor
         offers realistic coding challenges to help developers improve their
