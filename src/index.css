@@ -3,19 +3,76 @@
   --purple-100: hsl(275, 100%, 97%);
   --purple-600: hsl(292, 16%, 49%);
   --purple-950: hsl(292, 42%, 14%);
+  --blue: hsl(228, 45%, 44%);
+
+  font-size: 14px;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  color: var(--purple-950);
+}
+
+h1 {
+  font-size: 2.286rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  color: var(--purple-600);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  height: 100vh;
+  background-color: var(--purple-100);
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .accordion-container {
-  width: 400px;
+  min-width: 300px;
+  width: min(calc(100dvw - 100px), 640px);
+  padding: 20px;
+
+  border-radius: 10px;
+
+  background-color: var(--white);
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 20px 0;
+}
+
+.accordion-title img {
+  margin: 0 20px;
 }
 
 .accordion-header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+button {
+  background: none;
+  border: none;
+  height: 100%;
 }
 
 .accordion-body {
@@ -33,5 +90,18 @@
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--blue);
+}
+
+@media print {
+  .accordion-body {
+    display: initial;
+    height: initial;
+  }
+}
+
+@media screen and (min-width = 640px) {
+  body {
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
 }

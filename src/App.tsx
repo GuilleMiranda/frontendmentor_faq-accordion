@@ -1,5 +1,8 @@
 import { useState } from "react";
 import favicon from "./assets/images/favicon-32x32.png";
+import iconPlus from "./assets/images/icon-plus.svg";
+import iconMinus from "./assets/images/icon-minus.svg";
+import iconStar from "./assets/images/icon-star.svg";
 
 function App() {
   const [activeItems, setActiveItems] = useState<Array<number>>();
@@ -41,28 +44,40 @@ function App() {
     <>
       <title>Frontend Mentor | FAQ accordion</title>
       <link rel="icon" type="image/png" sizes="32x32" href={favicon} />
-      <h1>FAQs</h1>
-      {items.map((item, index) => {
-        return (
-          <div key={index} className="accordion-container">
-            <div className="accordion-header">
-              <p>{item.title}</p>
-              <button
-                onClick={() => {
-                  handleButton(index);
-                }}
+      <div className="accordion-container">
+        <div className="accordion-title">
+          <img src={iconStar} />
+          <h1>FAQs</h1>
+        </div>
+        {items.map((item, index) => {
+          return (
+            <div key={index}>
+              <div className="accordion-header">
+                <h2>{item.title}</h2>
+                <button
+                  onClick={() => {
+                    handleButton(index);
+                  }}
+                >
+                  <img
+                    src={activeItems?.includes(index) ? iconMinus : iconPlus}
+                    alt={
+                      activeItems?.includes(index)
+                        ? "Hide the content of " + item.title
+                        : "Show the content of " + item.title
+                    }
+                  />
+                </button>
+              </div>
+              <div
+                className={`accordion-body ${activeItems?.includes(index) ? "active-item" : ""}`}
               >
-                Open/Close
-              </button>
+                <p>{item.body}</p>
+              </div>
             </div>
-            <div
-              className={`accordion-body ${activeItems?.includes(index) ? "active-item" : ""}`}
-            >
-              <p>{item.body}</p>
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
 
       <footer className="attribution">
         Challenge by{" "}
