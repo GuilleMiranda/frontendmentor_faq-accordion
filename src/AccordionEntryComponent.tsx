@@ -15,24 +15,23 @@ const AccordionEntryComponent = ({
   handleButton,
 }: Props) => {
   return (
-    <div key={index}>
-      <div className="accordion-header">
+    <div className="accordion-entry-container" key={index}>
+      <button
+        className="accordion-header"
+        onClick={() => {
+          handleButton(index);
+        }}
+      >
         <h2>{entry.title}</h2>
-        <button
-          onClick={() => {
-            handleButton(index);
-          }}
-        >
-          <img
-            src={isActive ? iconMinus : iconPlus}
-            alt={
-              isActive
-                ? "Hide the content of " + entry.title
-                : "Show the content of " + entry.title
-            }
-          />
-        </button>
-      </div>
+        <img
+          src={isActive ? iconMinus : iconPlus}
+          alt={
+            isActive
+              ? "Hide the content of " + entry.title
+              : "Show the content of " + entry.title
+          }
+        />
+      </button>
       <div className={`accordion-body ${isActive ? "active-item" : ""}`}>
         <p>{entry.body}</p>
       </div>
