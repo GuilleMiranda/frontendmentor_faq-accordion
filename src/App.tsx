@@ -1,31 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import AccordionEntryComponent from "./AccordionEntryComponent";
 import favicon from "./assets/images/favicon-32x32.png";
 import iconStar from "./assets/images/icon-star.svg";
 import { entries } from "./data";
 
 function App() {
-  const [activeItems, setActiveItems] = useState<Array<number>>();
-
-  const handleButton = (index: number) => {
-    let changedList: Array<number> = [];
-    let indexExists = false;
-
-    activeItems?.map((i) => {
-      if (i !== index) {
-        changedList.push(i);
-      } else {
-        indexExists = true;
-      }
-    });
-
-    if (!indexExists) {
-      changedList.push(index);
-    }
-
-    setActiveItems(changedList);
-  };
-
   return (
     <>
       <title>Frontend Mentor | FAQ accordion</title>
@@ -39,12 +18,7 @@ function App() {
           let lastEntryIndex = entries.length - 1;
           return (
             <Fragment key={index}>
-              <AccordionEntryComponent
-                index={index}
-                entry={entry}
-                handleButton={handleButton}
-                isActive={activeItems?.includes(index) ? true : false}
-              />
+              <AccordionEntryComponent entry={entry} />
 
               {lastEntryIndex !== index && <hr />}
             </Fragment>

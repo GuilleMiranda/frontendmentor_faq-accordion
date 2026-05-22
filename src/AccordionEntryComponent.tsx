@@ -1,25 +1,23 @@
+import { useState } from "react";
 import type { Entry } from "./Entry";
 import iconMinus from "./assets/images/icon-minus.svg";
 import iconPlus from "./assets/images/icon-plus.svg";
 
 type Props = {
-  index: number;
   entry: Entry;
-  isActive: boolean;
-  handleButton: (index: number) => void;
 };
-const AccordionEntryComponent = ({
-  index,
-  entry,
-  isActive,
-  handleButton,
-}: Props) => {
+const AccordionEntryComponent = ({ entry }: Props) => {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleButton = () => {
+    setIsActive(!isActive);
+  };
   return (
-    <div className="accordion-entry-container" key={index}>
+    <div className="accordion-entry-container">
       <button
         className="accordion-header"
         onClick={() => {
-          handleButton(index);
+          handleButton;
         }}
       >
         <h2>{entry.title}</h2>
