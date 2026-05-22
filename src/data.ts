@@ -11,4 +11,8 @@ export const entries = [
     title: "Can I use Frontend Mentor projects in my portfolio?",
     body: "Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers! How can I get help if I'm stuck on a Frontend Mentor challenge? The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.",
   },
+  {
+    title: "How can I get help if I'm stuck on a Frontend Mentor challenge?",
+    body: "The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members.",
+  },
 ];
