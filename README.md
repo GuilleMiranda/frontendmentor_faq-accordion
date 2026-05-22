@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://your-solution-url.com)
+- Solution URL: [GitHub](https://github.com/GuilleMiranda/frontendmentor_faq-accordion)
 - Live Site URL: [Live Site](https://your-live-site-url.com)
 
 ## My process
@@ -54,7 +54,7 @@ This finally clicked. Now the card grows smoothly up to desktop mode, and it doe
 ```css
 .accordion-container {
   min-width: 300px;
-  width: min(calc(100dvw - 100px), 540px);
+  width: min(calc(100dvw - 45px), 540px);
 }
 ```
 
@@ -69,4 +69,4 @@ I need to come up with best practices quicker, I know I'm just starting the fron
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/GuilleMiranda)
+- Frontend Mentor - [@GuilleMiranda](https://www.frontendmentor.io/profile/GuilleMiranda)
