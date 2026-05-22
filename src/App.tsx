@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import AccordionEntryComponent from "./AccordionEntryComponent";
 import favicon from "./assets/images/favicon-32x32.png";
 import iconStar from "./assets/images/icon-star.svg";
@@ -36,14 +36,18 @@ function App() {
           <h1>FAQs</h1>
         </div>
         {entries.map((entry, index) => {
+          let lastEntryIndex = entries.length - 1;
           return (
-            <AccordionEntryComponent
-              key={index}
-              entry={entry}
-              handleButton={handleButton}
-              index={index}
-              isActive={activeItems?.includes(index) ? true : false}
-            />
+            <Fragment key={index}>
+              <AccordionEntryComponent
+                index={index}
+                entry={entry}
+                handleButton={handleButton}
+                isActive={activeItems?.includes(index) ? true : false}
+              />
+
+              {lastEntryIndex !== index && <hr />}
+            </Fragment>
           );
         })}
       </div>

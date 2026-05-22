@@ -5,7 +5,7 @@
   --purple-950: hsl(292, 42%, 14%);
   --blue: hsl(228, 45%, 44%);
 
-  font-size: 14px;
+  font-size: 16px;
 }
 
 * {
@@ -17,21 +17,24 @@
 }
 
 h1 {
-  font-size: 2.286rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 p {
+  font-size: 0.9375rem;
+  line-height: 1.5;
   color: var(--purple-600);
 }
 
 body {
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 145px;
   height: 100vh;
   background-color: var(--purple-100);
   background-image: url("./assets/images/background-pattern-mobile.svg");
@@ -40,12 +43,13 @@ body {
 }
 
 .accordion-container {
-  min-width: 300px;
-  width: min(calc(100dvw - 100px), 540px);
+  min-width: 330px;
+  width: min(calc(100dvw - 45px), 540px);
   padding: 20px;
 
   border-radius: 10px;
   background-color: var(--white);
+  box-shadow: 20px 20px 20px 20px hsl(0, 0, 20%);
 }
 
 .accordion-title {
@@ -53,11 +57,13 @@ body {
   flex-direction: row;
   align-items: center;
 
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .accordion-title img {
-  margin: 0 20px;
+  width: 25px;
+  height: auto;
+  margin: 0 20px 0 0;
 }
 
 .accordion-header {
@@ -82,6 +88,12 @@ button {
 .active-item {
   display: initial;
   height: initial;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 2px solid var(--purple-100);
 }
 
 .attribution {
