@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Activity, useState } from "react";
 import type { Entry } from "./Entry";
 import iconMinus from "./assets/images/icon-minus.svg";
 import iconPlus from "./assets/images/icon-plus.svg";
@@ -12,14 +12,10 @@ const AccordionEntryComponent = ({ entry }: Props) => {
   const handleButton = () => {
     setIsActive(!isActive);
   };
+
   return (
     <div className="accordion-entry-container">
-      <button
-        className="accordion-header"
-        onClick={() => {
-          handleButton;
-        }}
-      >
+      <button className="accordion-header" onClick={handleButton}>
         <h2>{entry.title}</h2>
         <img
           src={isActive ? iconMinus : iconPlus}
