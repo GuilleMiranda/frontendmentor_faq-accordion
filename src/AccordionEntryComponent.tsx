@@ -1,4 +1,4 @@
-import { Activity, useState } from "react";
+import { useState } from "react";
 import type { Entry } from "./Entry";
 import iconMinus from "./assets/images/icon-minus.svg";
 import iconPlus from "./assets/images/icon-plus.svg";
