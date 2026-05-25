@@ -35,7 +35,8 @@ function App() {
         <a href="https://www.frontendmentor.io?ref=challenge">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Guille Miranda</a>.
+        . Coded by{" "}
+        <a href="https://github.com/GuilleMiranda/">Guille Miranda</a>.
       </footer>
     </>
   );
