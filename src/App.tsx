@@ -10,20 +10,24 @@ function App() {
       <title>Frontend Mentor | FAQ accordion</title>
       <link rel="icon" type="image/png" sizes="32x32" href={favicon} />
       <div className="accordion-container">
-        <div className="accordion-title">
-          <img src={iconStar} />
-          <h1>FAQs</h1>
-        </div>
-        {entries.map((entry, index) => {
-          let lastEntryIndex = entries.length - 1;
-          return (
-            <Fragment key={index}>
-              <AccordionEntryComponent entry={entry} />
+        <header>
+          <div className="accordion-title">
+            <img src={iconStar} alt="Star icon before the title" />
+            <h1 aria-label="Frequently Asked Questions">FAQs</h1>
+          </div>
+        </header>
+        <main>
+          {entries.map((entry, index) => {
+            let lastEntryIndex = entries.length - 1;
+            return (
+              <Fragment key={index}>
+                <AccordionEntryComponent entry={entry} />
 
-              {lastEntryIndex !== index && <hr />}
-            </Fragment>
-          );
-        })}
+                {lastEntryIndex !== index && <hr />}
+              </Fragment>
+            );
+          })}
+        </main>
       </div>
 
       <footer className="attribution">
