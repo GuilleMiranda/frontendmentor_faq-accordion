@@ -14,7 +14,6 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
 
 ## Overview
@@ -61,11 +60,6 @@ This finally clicked. Now the card grows smoothly up to desktop mode, and it doe
 ### Continued development
 
 I need to come up with best practices quicker, I know I'm just starting the frontend roadmap and making it work is good enough, but I strive for perfection lol. Very happy so far with this challenge. I need to keep working on responsiveness as well as on accesibility, those are "new" to me (knew the concepts, worked with it on Oracle Apex, but this is the first time actually coding the frontend to have those features). I think after this challenge I will try to tackle something with a more challenging layout.
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
