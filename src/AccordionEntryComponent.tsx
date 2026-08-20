@@ -18,6 +18,7 @@ const AccordionEntryComponent = ({ entry }: Props) => {
       <button
         className="accordion-header"
         onClick={handleButton}
+        type="button"
         aria-expanded={isActive ? "true" : "false"}
       >
         {entry.title}

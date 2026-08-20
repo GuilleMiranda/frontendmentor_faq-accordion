@@ -85,9 +85,6 @@ body {
 
 .accordion-header:hover {
   cursor: pointer;
-}
-
-.accordion-header:hover {
   color: var(--accent);
 }
 
