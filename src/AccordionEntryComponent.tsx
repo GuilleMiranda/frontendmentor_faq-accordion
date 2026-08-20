@@ -20,8 +20,11 @@ const AccordionEntryComponent = ({ entry }: Props) => {
         onClick={handleButton}
         aria-expanded={isActive ? "true" : "false"}
       >
-        <h2>{entry.title}</h2>
-        <img src={isActive ? iconMinus : iconPlus} />
+        {entry.title}
+        <img
+          src={isActive ? iconMinus : iconPlus}
+          alt={`${isActive ? "Minus sign" : "Plus sign"}`}
+        />
       </button>
       <div className={`accordion-body ${isActive ? "active-item" : ""}`}>
         <p>{entry.body}</p>

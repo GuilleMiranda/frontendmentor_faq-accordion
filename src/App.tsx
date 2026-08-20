@@ -13,7 +13,7 @@ function App() {
         <header>
           <div className="accordion-title">
             <img src={iconStar} alt="Star icon before the title" />
-            <h1 aria-label="Frequently Asked Questions">FAQs</h1>
+            <h1>FAQs</h1>
           </div>
         </header>
         <main>
